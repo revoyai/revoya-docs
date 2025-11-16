@@ -1,32 +1,41 @@
-# Revoya Documentation
+# Website
 
-Official documentation for the Revoya compliance automation platform.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## 📚 Documentation Site
+## Installation
 
-Visit [docs.revoya.ai](https://docs.revoya.ai) for the full documentation.
+```bash
+yarn
+```
 
-## Quick Links
+## Local Development
 
-- [Getting Started](./getting-started.md)
-- [API Reference](./api-reference.md)
-- [Integrations](./integrations/README.md)
-- [Compliance Frameworks](./frameworks/README.md)
+```bash
+yarn start
+```
 
-## About Revoya
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-Revoya helps engineering teams automate compliance monitoring and policy enforcement across their infrastructure. Stay compliant with SOC 2, ISO 27001, HIPAA, and other frameworks without slowing down development.
+## Build
 
-## Getting Help
+```bash
+yarn build
+```
 
-- **Website**: [revoya.ai](https://revoya.ai)
-- **Support**: support@revoya.ai
-- **Sales**: sales@revoya.ai
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-## Contributing
+## Deployment
 
-We welcome contributions to improve our documentation! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+Using SSH:
 
----
+```bash
+USE_SSH=true yarn deploy
+```
 
-Copyright © 2025 Revoya, Inc.
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
